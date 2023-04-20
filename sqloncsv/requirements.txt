@@ -1,0 +1,19 @@
+1. When a user starts the program, it loads up and shows a terminal allowing people to load a csv file
+2. Possible commands as of now are
+    2.1 LOAD FILE "<FILENAME>" AS <VARIABLE-NAME> (multi load is allowed)
+    2.2 SHOW SCHEMA <VARIABLE-NAME> (Shows the schema and data type based on random sampling)
+    2.3 FILE STATISTICS (Shows the number of rows and statistics of all the number type of fields)
+    2.3 EXIT (To terminate the terminal)
+3. Querying the file
+    3.1 SELECT * FROM <VARIABLE-NAME>
+    3.2 SELECT [<FIELD-NAME1, ..., FIELD-NAME-N>] FROM <VARIABLE-NAME>
+
+Future Scope:
+1. Allow joins
+2. Allow aggregation
+3. Allow for JSON files to be loaded
+
+
+20th April 2023
+1. Load a CSV File and return a list of its fields
+2. Raise an InvalidFileException when it is not a CSV file

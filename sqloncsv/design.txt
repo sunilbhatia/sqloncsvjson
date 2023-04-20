@@ -1,0 +1,11 @@
+20th April 2023
+This file lists down the high level design thoughts that I have in mind for this project. The design will evolve as the project moves ahead
+
+1. At the start of the program, we load the Command Engine and run it in a infinite loop to accept commands from the user
+2. The Command Engine then processes the command and takes needed action
+3. If the action is about SQL processing, it delegates it to the SQLEngine
+4. The SQLEngine handles the needed commands of SQL processing on a file
+5. Each file would be represented by a unique object that internally has the understanding about the schema, data types, etc
+6. The SQLEngine would receive the command on a schema, convert it into a representation that be executed via the QueryEngine on the Schema under query
+
+I would start with the Schema first, then the QueryEngine and then the outer objects of SQLEngine and Command Engine. There would be more ancillary objects along the way and we will cross that bridge as the project moves along.
