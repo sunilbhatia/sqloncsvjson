@@ -15,5 +15,8 @@ Future Scope:
 
 
 20th April 2023
+1. Got a basic boilerplate code created
+
+21st April 2023
 1. Load a CSV File and return a list of its fields
-2. Raise an InvalidFileException when it is not a CSV file
+2.

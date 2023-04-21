@@ -1,32 +1,30 @@
 package dev.sunilb.entities;
 
+import com.opencsv.exceptions.CsvValidationException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static dev.sunilb.utils.Utils.loadResourceFile;
 
 public class CSVSchemaTest {
 
     @Test
-    public void shouldReturnFieldsListForCSVFile() {
+    public void shouldReturnFieldsListForCSVFile() throws IOException, CsvValidationException {
 
         String fileName = "csv/basic.csv";
 
-        //TODO: May have to extract this to a utils package for testing as this looks like a common method
         File file = loadResourceFile(fileName);
 
-        //TODO: now that the basic code is stitched together, now load the real file and extract real fields
         CSVSchema schema = new CSVSchema(file);
         List<String> fieldList = schema.getFieldList();
-        List<String> expectedList = List.of("A", "B", "C");
+        List<String> expectedList = List.of("col1", "col2", "col3");
         Assert.assertEquals(fieldList, expectedList);
     }
 
-    private File loadResourceFile(String fileName) {
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource(fileName).getFile());
-        return file;
-    }
 }
