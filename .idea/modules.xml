@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/sqloncsv/sqloncsv.iml" filepath="$PROJECT_DIR$/sqloncsv/sqloncsv.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/sqloncsvjson.iml" filepath="$PROJECT_DIR$/.idea/sqloncsvjson.iml" />
-    </modules>
-  </component>
-</project>
