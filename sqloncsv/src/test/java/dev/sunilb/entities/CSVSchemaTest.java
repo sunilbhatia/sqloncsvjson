@@ -21,7 +21,7 @@ public class CSVSchemaTest {
 
         File file = loadResourceFile(fileName);
 
-        CSVSchema schema = new CSVSchema(file);
+        CSVSchema schema = new CSVSchema("var",file);
         List<String> fieldList = schema.getFieldList();
         List<String> expectedList = List.of("col1", "col2", "col3");
         Assert.assertEquals(fieldList, expectedList);
